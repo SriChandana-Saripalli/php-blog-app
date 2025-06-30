@@ -39,6 +39,30 @@ $users = $stmt->get_result();
             background: url('flower.jpg') no-repeat center center fixed;
             background-size: cover;
         }
+        .navbar {
+            background-color: #e3063b;
+            color: white;
+            padding: 14px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .navbar .title {
+            font-weight: 600;
+            font-size: 20px;
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+            padding: 8px 16px;
+            border-radius: 6px;
+            transition: background 0.3s ease;
+        }
+        .navbar a:hover {
+            background-color: #b00333;
+        }
+
         .overlay {
             background: rgba(255, 255, 255, 0.88);
             min-height: 100vh;
@@ -117,6 +141,17 @@ $users = $stmt->get_result();
     </style>
 </head>
 <body>
+
+<!-- Admin Navbar -->
+<div class="navbar">
+    <div class="title">📊 My Blog Admin Panel</div>
+    <div>
+        <a href="admin_dashboard.php">🏠 Dashboard</a>
+        <a href="create_post.php">➕ Create Post</a>
+        <a href="logout.php">🚪 Logout</a>
+    </div>
+</div>
+
 <div class="overlay">
     <div class="container">
         <h2>All Registered Users</h2>
